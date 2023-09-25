@@ -1,0 +1,65 @@
+/* Reset de estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #494d5f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para o container principal */
+.container {
+    background-color: #fceed1;
+    border-radius: 25px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o título */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Estilo para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilo para o cabeçalho da tabela */
+th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo para as células da tabela */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para linhas ímpares da tabela */
+/* tr:nth-child(odd) {
+    background-color: #f2f2f2;
+} */
+
+tr {
+    background-color: #f2f2f2;
+}

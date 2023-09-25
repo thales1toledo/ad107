@@ -1,0 +1,42 @@
+CRITICAL - 2023-09-11 22:21:11 --> syntax error, unexpected '<'
+in APPPATH/Views/pessoa_exibir.php on line 10.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Pessoa.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 22:24:31 --> Array to string conversion
+in APPPATH/Views/pessoa_exibir.php on line 9.
+ 1 APPPATH/Views/pessoa_exibir.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/www/html/lmiguel/ads107/aulas/app/Views/pessoa_exibir.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pessoa.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 22:24:49 --> Trying to get property 'Id' of non-object
+in APPPATH/Views/pessoa_exibir.php on line 9.
+ 1 APPPATH/Views/pessoa_exibir.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/www/html/lmiguel/ads107/aulas/app/Views/pessoa_exibir.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pessoa.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-11 22:35:43 --> Trying to get property 'Id' of non-object
+in APPPATH/Views/pessoa_exibir.php on line 17.
+ 1 APPPATH/Views/pessoa_exibir.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/home/www/html/lmiguel/ads107/aulas/app/Views/pessoa_exibir.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1176): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Pessoa.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

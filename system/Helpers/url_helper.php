@@ -19,7 +19,7 @@ use Config\Services;
 
 // CodeIgniter URL Helpers
 
-if (! function_exists('_get_uri')) {
+if (!function_exists('_get_uri')) {
     /**
      * Used by the other URL functions to build a framework-specific URI
      * based on $request->getUri()->getBaseURL() and the App config.
@@ -58,7 +58,7 @@ if (! function_exists('_get_uri')) {
 
         // If a full URI was passed then convert it
         if (strpos($relativePath, '://') !== false) {
-            $full         = new URI($relativePath);
+            $full = new URI($relativePath);
             $relativePath = URI::createURIString(
                 null,
                 null,
@@ -105,7 +105,7 @@ if (! function_exists('_get_uri')) {
     }
 }
 
-if (! function_exists('site_url')) {
+if (!function_exists('site_url')) {
     /**
      * Returns a site URL as defined by the App config.
      *
@@ -134,7 +134,7 @@ if (! function_exists('site_url')) {
     }
 }
 
-if (! function_exists('base_url')) {
+if (!function_exists('base_url')) {
     /**
      * Returns the base URL as defined by the App config.
      * Base URLs are trimmed site URLs without the index page.
@@ -148,7 +148,7 @@ if (! function_exists('base_url')) {
         $config = clone config(App::class);
 
         // Use the current baseURL for multiple domain support
-        $request         = Services::request();
+        $request = Services::request();
         $config->baseURL = $request instanceof CLIRequest
             ? rtrim($config->baseURL, '/ ') . '/'
             : $request->getUri()->getBaseURL();
@@ -159,7 +159,7 @@ if (! function_exists('base_url')) {
     }
 }
 
-if (! function_exists('current_url')) {
+if (!function_exists('current_url')) {
     /**
      * Returns the current full URL based on the Config\App settings and IncomingRequest.
      *
@@ -173,7 +173,7 @@ if (! function_exists('current_url')) {
     {
         $request ??= Services::request();
         /** @var CLIRequest|IncomingRequest $request */
-        $routePath  = $request->getPath();
+        $routePath = $request->getPath();
         $currentURI = $request->getUri();
 
         // Append queries and fragments
@@ -190,7 +190,7 @@ if (! function_exists('current_url')) {
     }
 }
 
-if (! function_exists('previous_url')) {
+if (!function_exists('previous_url')) {
     /**
      * Returns the previous URL the current visitor was on. For security reasons
      * we first check in a saved session variable, if it exists, and use that.
@@ -212,7 +212,7 @@ if (! function_exists('previous_url')) {
     }
 }
 
-if (! function_exists('uri_string')) {
+if (!function_exists('uri_string')) {
     /**
      * URL String
      *
@@ -227,7 +227,7 @@ if (! function_exists('uri_string')) {
     }
 }
 
-if (! function_exists('index_page')) {
+if (!function_exists('index_page')) {
     /**
      * Index page
      *
@@ -244,7 +244,7 @@ if (! function_exists('index_page')) {
     }
 }
 
-if (! function_exists('anchor')) {
+if (!function_exists('anchor')) {
     /**
      * Anchor Link
      *
@@ -276,7 +276,7 @@ if (! function_exists('anchor')) {
     }
 }
 
-if (! function_exists('anchor_popup')) {
+if (!function_exists('anchor_popup')) {
     /**
      * Anchor Link - Pop-up version
      *
@@ -304,12 +304,12 @@ if (! function_exists('anchor_popup')) {
             return '<a href="' . $siteUrl . '" onclick="window.open(\'' . $siteUrl . "', '_blank'); return false;\">" . $title . '</a>';
         }
 
-        if (! is_array($attributes)) {
+        if (!is_array($attributes)) {
             $attributes = [$attributes];
 
             // Ref: http://www.w3schools.com/jsref/met_win_open.asp
             $windowName = '_blank';
-        } elseif (! empty($attributes['window_name'])) {
+        } elseif (!empty($attributes['window_name'])) {
             $windowName = $attributes['window_name'];
             unset($attributes['window_name']);
         } else {
@@ -324,12 +324,12 @@ if (! function_exists('anchor_popup')) {
         $attributes = stringify_attributes($attributes);
 
         return '<a href="' . $siteUrl
-                . '" onclick="window.open(\'' . $siteUrl . "', '" . $windowName . "', '" . stringify_attributes($atts, true) . "'); return false;\""
-                . $attributes . '>' . $title . '</a>';
+            . '" onclick="window.open(\'' . $siteUrl . "', '" . $windowName . "', '" . stringify_attributes($atts, true) . "'); return false;\""
+            . $attributes . '>' . $title . '</a>';
     }
 }
 
-if (! function_exists('mailto')) {
+if (!function_exists('mailto')) {
     /**
      * Mailto Link
      *
@@ -347,7 +347,7 @@ if (! function_exists('mailto')) {
     }
 }
 
-if (! function_exists('safe_mailto')) {
+if (!function_exists('safe_mailto')) {
     /**
      * Encoded Mailto Link
      *
@@ -408,9 +408,9 @@ if (! function_exists('safe_mailto')) {
 
                 if (count($temp) === $count) {
                     $number = ($count === 3) ? (($temp[0] % 16) * 4096) + (($temp[1] % 64) * 64) + ($temp[2] % 64) : (($temp[0] % 32) * 64) + ($temp[1] % 64);
-                    $x[]    = '|' . $number;
-                    $count  = 1;
-                    $temp   = [];
+                    $x[] = '|' . $number;
+                    $count = 1;
+                    $temp = [];
                 }
             }
         }
@@ -425,22 +425,22 @@ if (! function_exists('safe_mailto')) {
         // improve obfuscation by eliminating newlines & whitespace
         $cspNonce = csp_script_nonce();
         $cspNonce = $cspNonce ? ' ' . $cspNonce : $cspNonce;
-        $output   = '<script' . $cspNonce . '>'
-                . 'var l=new Array();';
+        $output = '<script' . $cspNonce . '>'
+            . 'var l=new Array();';
 
         foreach ($x as $i => $value) {
             $output .= 'l[' . $i . "] = '" . $value . "';";
         }
 
         return $output . ('for (var i = l.length-1; i >= 0; i=i-1) {'
-                . "if (l[i].substring(0, 1) === '|') document.write(\"&#\"+unescape(l[i].substring(1))+\";\");"
-                . 'else document.write(unescape(l[i]));'
-                . '}'
-                . '</script>');
+            . "if (l[i].substring(0, 1) === '|') document.write(\"&#\"+unescape(l[i].substring(1))+\";\");"
+            . 'else document.write(unescape(l[i]));'
+            . '}'
+            . '</script>');
     }
 }
 
-if (! function_exists('auto_link')) {
+if (!function_exists('auto_link')) {
     /**
      * Auto-linker
      *
@@ -469,7 +469,7 @@ if (! function_exists('auto_link')) {
                 //
                 // With PREG_OFFSET_CAPTURE, both of the above is an array,
                 // where the actual value is held in [0] and its offset at the [1] index.
-                $a   = '<a href="' . (strpos($match[1][0], '/') ? '' : 'http://') . $match[0][0] . '"' . $target . '>' . $match[0][0] . '</a>';
+                $a = '<a href="' . (strpos($match[1][0], '/') ? '' : 'http://') . $match[0][0] . '"' . $target . '>' . $match[0][0] . '</a>';
                 $str = substr_replace($str, $a, $match[0][1], strlen($match[0][0]));
             }
         }
@@ -487,7 +487,7 @@ if (! function_exists('auto_link')) {
     }
 }
 
-if (! function_exists('prep_url')) {
+if (!function_exists('prep_url')) {
     /**
      * Prep URL - Simply adds the http:// or https:// part if no scheme is included.
      *
@@ -516,7 +516,7 @@ if (! function_exists('prep_url')) {
     }
 }
 
-if (! function_exists('url_title')) {
+if (!function_exists('url_title')) {
     /**
      * Create URL Title
      *
@@ -533,9 +533,9 @@ if (! function_exists('url_title')) {
         $qSeparator = preg_quote($separator, '#');
 
         $trans = [
-            '&.+?;'                  => '',
-            '[^\w\d\pL\pM _-]'       => '',
-            '\s+'                    => $separator,
+            '&.+?;' => '',
+            '[^\w\d\pL\pM _-]' => '',
+            '\s+' => $separator,
             '(' . $qSeparator . ')+' => $separator,
         ];
 
@@ -553,7 +553,7 @@ if (! function_exists('url_title')) {
     }
 }
 
-if (! function_exists('mb_url_title')) {
+if (!function_exists('mb_url_title')) {
     /**
      * Create URL Title that takes into account accented characters
      *
@@ -573,7 +573,7 @@ if (! function_exists('mb_url_title')) {
     }
 }
 
-if (! function_exists('url_to')) {
+if (!function_exists('url_to')) {
     /**
      * Get the full, absolute URL to a route name or controller method
      * (with additional arguments)
@@ -589,7 +589,7 @@ if (! function_exists('url_to')) {
      */
     function url_to(string $controller, ...$args): string
     {
-        if (! $route = route_to($controller, ...$args)) {
+        if (!$route = route_to($controller, ...$args)) {
             $explode = explode('::', $controller);
 
             if (isset($explode[1])) {
@@ -603,7 +603,7 @@ if (! function_exists('url_to')) {
     }
 }
 
-if (! function_exists('url_is')) {
+if (!function_exists('url_is')) {
     /**
      * Determines if current url path contains
      * the given path. It may contain a wildcard (*)
@@ -615,7 +615,7 @@ if (! function_exists('url_is')) {
     function url_is(string $path): bool
     {
         // Setup our regex to allow wildcards
-        $path        = '/' . trim(str_replace('*', '(\S)*', $path), '/ ');
+        $path = '/' . trim(str_replace('*', '(\S)*', $path), '/ ');
         $currentPath = '/' . trim(uri_string(), '/ ');
 
         return (bool) preg_match("|^{$path}$|", $currentPath, $matches);

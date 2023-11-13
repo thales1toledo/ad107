@@ -34,6 +34,8 @@ $routes->get('exibir', 'Home::exibir');
 $routes->get('pyasteroids', 'Home::pyasteroids');
 $routes->get('ttoledo', 'Home::ttoledo');
 $routes->get('exibirpessoa', 'Pessoa::exibir');
+$routes->get('exibirproblema', 'Problema::exibir');
+$routes->post('register', 'RegisterController::register');
 
 /*
  * --------------------------------------------------------------------

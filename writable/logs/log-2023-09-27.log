@@ -1,0 +1,96 @@
+ERROR - 2023-09-27 21:54:47 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'aluno', Object(SensitiveParameterValue), 'ttoledo', 3306, '', 0)
+#1 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ads107\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ads107\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ads107\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ads107\app\Controllers\Pessoa.php(10): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ads107\system\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+#8 C:\xampp\htdocs\ads107\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+#9 C:\xampp\htdocs\ads107\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ads107\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ads107\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ads107\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ads107\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ads107\app\Controllers\Pessoa.php(10): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ads107\system\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+#7 C:\xampp\htdocs\ads107\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+#8 C:\xampp\htdocs\ads107\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ads107\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-27 21:54:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pessoas`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Pessoa.php(10): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 23:00:17 --> Undefined variable $key
+in APPPATH\Views\pessoa_exibir.php on line 38.
+ 1 APPPATH\Views\pessoa_exibir.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $key', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Pessoa.php(13): view('pessoa_exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 23:03:08 --> Undefined variable $i
+in APPPATH\Views\pessoa_exibir.php on line 38.
+ 1 APPPATH\Views\pessoa_exibir.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $i', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 38)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Pessoa.php(13): view('pessoa_exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 23:16:16 --> Undefined variable $style
+in APPPATH\Views\pessoa_exibir.php on line 42.
+ 1 APPPATH\Views\pessoa_exibir.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 42)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Pessoa.php(13): view('pessoa_exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 23:17:18 --> Undefined variable $style
+in APPPATH\Views\pessoa_exibir.php on line 30.
+ 1 APPPATH\Views\pessoa_exibir.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $style', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Pessoa.php(13): view('pessoa_exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 23:26:16 --> Undefined variable $class
+in APPPATH\Views\pessoa_exibir.php on line 37.
+ 1 APPPATH\Views\pessoa_exibir.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $class', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Pessoa.php(13): view('pessoa_exibir', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pessoa::exibir()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pessoa))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

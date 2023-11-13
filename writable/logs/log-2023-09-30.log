@@ -1,0 +1,224 @@
+CRITICAL - 2023-09-30 14:59:14 --> Class "App\Controllers\Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 14:59:41 --> Class "Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:00:14 --> Class "App\Controllers\Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:00:57 --> Class "App\Models\Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:01:01 --> Class "App\Models\Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:01:46 --> Class "Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:01:58 --> Class "App\Models\Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Register_controller->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:04:58 --> Class "Register_model" not found
+in APPPATH\Controllers\Register_controller.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-30 15:09:29 --> mysqli_sql_exception: Table 'ttoledo.user' doesn't exist in C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php(295): mysqli->query('select * from u...', 0)
+#1 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from u...')
+#2 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from u...')
+#3 C:\xampp\htdocs\ads107\app\Models\Register_model.php(11): CodeIgniter\Database\BaseConnection->query('select * from u...')
+#4 C:\xampp\htdocs\ads107\app\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(NULL, '123')
+#5 C:\xampp\htdocs\ads107\system\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+#6 C:\xampp\htdocs\ads107\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+#7 C:\xampp\htdocs\ads107\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ads107\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-30 15:09:29 --> Table 'ttoledo.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select * from user where (name=\'\' or naturalidade=\'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from user where (name=\'\' or naturalidade=\'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from user where (name=\'\' or naturalidade=\'123\')')
+ 4 APPPATH\Models\Register_model.php(11): CodeIgniter\Database\BaseConnection->query('select * from user where (name=\'\' or naturalidade=\'123\')')
+ 5 APPPATH\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(null, '123')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-30 15:09:45 --> mysqli_sql_exception: Unknown column 'name' in 'where clause' in C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php(295): mysqli->query('select * from p...', 0)
+#1 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from p...')
+#2 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from p...')
+#3 C:\xampp\htdocs\ads107\app\Models\Register_model.php(11): CodeIgniter\Database\BaseConnection->query('select * from p...')
+#4 C:\xampp\htdocs\ads107\app\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(NULL, '123')
+#5 C:\xampp\htdocs\ads107\system\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+#6 C:\xampp\htdocs\ads107\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+#7 C:\xampp\htdocs\ads107\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ads107\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-09-30 15:09:45 --> Unknown column 'name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('select * from pessoas where (name=\'\' or naturalidade=\'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from pessoas where (name=\'\' or naturalidade=\'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from pessoas where (name=\'\' or naturalidade=\'123\')')
+ 4 APPPATH\Models\Register_model.php(11): CodeIgniter\Database\BaseConnection->query('select * from pessoas where (name=\'\' or naturalidade=\'123\')')
+ 5 APPPATH\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(null, '123')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:09:56 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(803): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Register_model.php(17): CodeIgniter\Model->__get('load')
+ 4 APPPATH\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(null, '123')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-30 15:11:30 --> mysqli_sql_exception: Column 'nome' cannot be null in C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\ads107\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\ads107\app\Models\Register_model.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ads107\app\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(NULL, '123')
+#6 C:\xampp\htdocs\ads107\system\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+#7 C:\xampp\htdocs\ads107\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+#8 C:\xampp\htdocs\ads107\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ads107\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-30 15:11:30 --> Column 'nome' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (NULL, \'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (NULL, \'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (NULL, \'123\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (:nome:, :naturalidade:)', [...], false)
+ 5 APPPATH\Models\Register_model.php(18): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(null, '123')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-30 15:11:38 --> mysqli_sql_exception: Column 'nome' cannot be null in C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\ads107\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\ads107\app\Models\Register_model.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ads107\app\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(NULL, '123')
+#6 C:\xampp\htdocs\ads107\system\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+#7 C:\xampp\htdocs\ads107\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+#8 C:\xampp\htdocs\ads107\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ads107\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-30 15:11:38 --> Column 'nome' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (NULL, \'123\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (NULL, \'123\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (NULL, \'123\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pessoas` (`nome`, `naturalidade`) VALUES (:nome:, :naturalidade:)', [...], false)
+ 5 APPPATH\Models\Register_model.php(18): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Register_controller.php(17): App\Models\Register_model->insert_data(null, '123')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:15:06 --> Undefined variable $titulo
+in APPPATH\Views\pessoa_exibir.php on line 8.
+ 1 APPPATH\Views\pessoa_exibir.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 8)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Register_controller.php(19): view('pessoa_exibir')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:15:16 --> Undefined variable $titulo
+in APPPATH\Views\pessoa_exibir.php on line 8.
+ 1 APPPATH\Views\pessoa_exibir.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 8)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Register_controller.php(19): view('pessoa_exibir')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:15:58 --> Undefined variable $titulo
+in APPPATH\Views\pessoa_exibir.php on line 8.
+ 1 APPPATH\Views\pessoa_exibir.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 8)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Register_controller.php(19): view('pessoa_exibir')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:16:16 --> Undefined variable $pessoas
+in APPPATH\Views\pessoa_exibir.php on line 56.
+ 1 APPPATH\Views\pessoa_exibir.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pessoas', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php', 56)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\pessoa_exibir.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('pessoa_exibir', [], true)
+ 5 APPPATH\Controllers\Register_controller.php(19): view('pessoa_exibir')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:21:12 --> The route for "Pessoa/exibir" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('Pessoa/exibir')
+ 2 SYSTEMPATH\Common.php(876): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Register_controller.php(22): redirect('Pessoa/exibir')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:25:05 --> Undefined property: Config\App::$indexPage
+in SYSTEMPATH\Helpers\url_helper.php on line 88.
+ 1 SYSTEMPATH\Helpers\url_helper.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\App::$indexPage', 'C:\\xampp\\htdocs\\ads107\\system\\Helpers\\url_helper.php', 88)
+ 2 SYSTEMPATH\Helpers\url_helper.php(187): _get_uri('/')
+ 3 SYSTEMPATH\Debug\Toolbar.php(81): current_url()
+ 4 SYSTEMPATH\Debug\Toolbar.php(370): CodeIgniter\Debug\Toolbar->run(1696087505.239154, 0.0219, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 5 SYSTEMPATH\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+ 7 SYSTEMPATH\CodeIgniter.php(517): CodeIgniter\Filters\Filters->run('/', 'after')
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-30 15:40:26 --> Array callback must have exactly two elements
+in APPPATH\Controllers\Register_controller.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Register_controller->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

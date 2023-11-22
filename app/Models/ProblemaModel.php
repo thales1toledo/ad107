@@ -14,5 +14,10 @@ class ProblemaModel extends Model
     {
         $this->db->table($this->table)->insert($data);
     }
+
+    public function deleteProblema($id)
+    {
+        $this->db->table($this->table)->where('id', $id)->delete();
+    }
 }
 ?>

@@ -35,7 +35,11 @@ $routes->get('pyasteroids', 'Home::pyasteroids');
 $routes->get('ttoledo', 'Home::ttoledo');
 $routes->get('exibirpessoa', 'Pessoa::exibir');
 $routes->get('exibirproblema', 'Problema::exibir');
+$routes->get('exibirgestores', 'Gestor::exibir');
 $routes->post('register', 'RegisterController::register');
+$routes->post('register-gestor', 'RegisterController::registerGestor');
+$routes->get('problema-delete/(:num)', 'Problema::delete/$1');
+$routes->get('gestor-delete/(:num)', 'Gestor::delete/$1');
 
 /*
  * --------------------------------------------------------------------

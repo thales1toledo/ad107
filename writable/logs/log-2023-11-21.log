@@ -1,0 +1,56 @@
+INFO - 2023-11-21 00:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 00:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 01:06:06 --> Undefined variable $problema
+in APPPATH\Views\gestores.php on line 144.
+ 1 APPPATH\Views\gestores.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $problema', 'C:\\xampp\\htdocs\\ads107\\app\\Views\\gestores.php', 144)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\ads107\\app\\Views\\gestores.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('gestores', [], true)
+ 5 APPPATH\Controllers\Gestor.php(18): view('gestores', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Gestor::exibir()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gestor))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 01:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 01:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 01:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-21 01:20:47 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`ttoledo`.`ambiente`, CONSTRAINT `ambiente_ibfk_1` FOREIGN KEY (`gestor_id`) REFERENCES `gestor` (`gestor_id`)) in C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ads107\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ge...', 0)
+#1 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ge...')
+#2 C:\xampp\htdocs\ads107\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ge...')
+#3 C:\xampp\htdocs\ads107\system\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ge...', Array, false)
+#4 C:\xampp\htdocs\ads107\app\Models\GestorModel.php(20): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\ads107\app\Controllers\Gestor.php(27): App\Models\GestorModel->deleteGestor('5')
+#6 C:\xampp\htdocs\ads107\system\CodeIgniter.php(932): App\Controllers\Gestor->delete('5')
+#7 C:\xampp\htdocs\ads107\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gestor))
+#8 C:\xampp\htdocs\ads107\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ads107\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-21 01:20:47 --> Cannot delete or update a parent row: a foreign key constraint fails (`ttoledo`.`ambiente`, CONSTRAINT `ambiente_ibfk_1` FOREIGN KEY (`gestor_id`) REFERENCES `gestor` (`gestor_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `gestor`
+WHERE `gestor_id` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `gestor`
+WHERE `gestor_id` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `gestor`
+WHERE `gestor_id` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2791): CodeIgniter\Database\BaseConnection->query('DELETE FROM `gestor`
+WHERE `gestor_id` = :gestor_id:', [...], false)
+ 5 APPPATH\Models\GestorModel.php(20): CodeIgniter\Database\BaseBuilder->delete()
+ 6 APPPATH\Controllers\Gestor.php(27): App\Models\GestorModel->deleteGestor('5')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Gestor->delete('5')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gestor))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

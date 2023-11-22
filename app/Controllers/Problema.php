@@ -30,5 +30,19 @@ class Problema extends BaseController
 
         return view('problema_exibir', $data);
     }
+
+    public function delete($id)
+    {
+        $problemaModel = new ProblemaModel();
+
+        try {
+
+            $problemaModel->deleteProblema($id);
+
+            return redirect()->to('public/exibirproblema')->with('success', 'Registro deletado com sucesso.');
+        } catch (\Exception $e) {
+            return redirect()->to('/')->with('error', $e->getMessage());
+        }
+    }
 }
 ?>
